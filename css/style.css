@@ -1,33 +1,43 @@
+/*RESET*/
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
+/* Desplazamiento suave del html*/
 html {
     scroll-behavior: smooth;
 }
 
 body {
     margin:0;
-    font-family:'Times New Roman', Times, serif;
-    color: #150c16;
-    background-color:beige;
+    font-family:'Libre Caslon Condensed', Times, serif;
+    color: #dedbde;
+    background-color:rgb(116, 113, 113);
     overflow-x: hideen;
 }
 
+.libre-caslon-condensed {
+  font-family: "Libre Caslon Condensed", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* Contenedor principal */
 .container { width: min(1100px, calc(100% - 2rem)); 
 margin: 0 auto; }
 
+/* Configuraciones para el header- Encabezado */
 .sitio-header {
     position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(255,253,248,.92);
+  background: rgba(85, 83, 83, 0.92);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--line);
 }
 
+/* Configuraciones internas del encabezado-header-inner */
 .header-inner {
       display: flex;
   align-items: center;
@@ -39,9 +49,74 @@ margin: 0 auto; }
 .logo {
     display: flex;
   align-items: center;
-  gap: .6rem;
-  font-family: "Fraunces", serif;
+  gap: 0.6rem;
   font-weight: 700;
   font-size: 1.1rem;
-  color: rgb(37, 33, 33);
+  color: rgb(63, 8, 8);
+  text-decoration:none;
+}
+
+/*Listas*/
+ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+/*Enlaces*/
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/*Menu principal de navegacion*/
+.main-nav{
+    display: none;
+    align-items:center;
+    gap: 1.5rem;
+}
+
+/*Lista sea Horizontal */
+.main-nav ul{
+    display:flex;
+    gap: 1.5rem;
+}
+
+.main-nav a {
+    font-weight: 600;
+    transition: color .2s ease;
+}
+
+.main-nav a:hover {
+    color:rgb(44, 9, 9);
+}
+
+.menu-toggle {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgb(84, 71, 71);
+  background: #fff;
+  color: rgb(88, 83, 83);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.mobile-nav {
+  max-height: 0;
+  overflow: hidden;
+  border-top: 1px solid  rgb(84, 71, 71);
+  background: var(--paper);
+  transition: max-height .28s ease;
+}
+.mobile-nav.open { max-height: 360px; }
+.mobile-nav ul { display: flex; flex-direction: column; gap: .3rem; padding: 1rem 1.25rem; }
+.mobile-nav li a { display: block; padding: .7rem .5rem; border-radius: .6rem; font-weight: 600; }
+.mobile-nav .btn { margin: .5rem 1.25rem 1.25rem; }
+
+@media (min-width: 768px) {
+  .main-nav { display: flex; }
+  .menu-toggle, .mobile-nav { display: none; }
 }
