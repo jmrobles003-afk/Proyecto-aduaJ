@@ -59,8 +59,10 @@
 
 
             </nav>
-            <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">☰</button>
-            </div>
+            <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
 
             <nav id="mobile-menu" class="mobile-nav">
       <ul>
@@ -93,20 +95,38 @@
 <main>
     <!-- SECCION CARRUSEL -->
 
-    <section id="carrusel" class="carousel-section container">
-        <h2>Lanzamiento AduanPro</h2>
+    <section id="inicio" class="hero-section">
+        
         <div class="carousel-track" id="carouseltrackebc">
             <!-- Primera imagen hero-->
             <div class="carousel-slide">
                 <img src="img/hero.jpg" alt="imagen AduanPro hero">
+                <div class="slide-overlay">
+                        <span class="badge">Exportacion/Importacion</span>
+                        <h1>Aduanas <span class="highlight-yellow">Mas simple que nunca</span></h1>
+                        <p>Convertimos las exportaciones e importaciones en algo tan simple como magico.</p>
+                        <a href="#servicios" class="btn-hero">Contactanos</a>
+                    </div>
             </div>
             <!-- Segunda imagen hero-->
              <div class="carousel-slide">
                 <img src="img/hero1.jpg" alt="imagen AduanPro1 hero">
+                <div class="slide-overlay">
+                        <span class="badge">Analisis de mercado</span>
+                        <h1>Asesoria financiera <span class="highlight-yellow"></span>Descubrenos</h1>
+                        <p>Hacemos que tus proyectos se exploten al limite.</p>
+                        <a href="#servicios" class="btn-hero">Descubrir servicios</a>
+                    </div>
             </div>
             <!-- Tercera imagen hero-->
              <div class="carousel-slide">
                 <img src="img/hero2.jpg" alt="imagen AduanPro2 hero">
+                <div class="slide-overlay">
+                        <span class="badge">Experiencia Premium</span>
+                        <h1>Conocimiento de tratados int<span class="highlight-yellow">Asesoria Internacional</span></h1>
+                        <p>Brindamos capacitacion por profesionales para pontenciar tus proyectos.</p>
+                        <a href="#servicios" class="btn-hero">Descubrir asesorias</a>
+                    </div>
             </div>
         
         
@@ -115,12 +135,84 @@
        
         </div>
 
+         <!-- Botones de Navegación del Carrusel -->
+            <button id="btn-prev" class="carousel-arrow prev" aria-label="Imagen anterior">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button id="btn-next" class="carousel-arrow next" aria-label="Imagen siguiente">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+
+            <!-- Puntos Indicadores -->
+            <div class="carousel-dots" id="carousel-dots">
+                <button class="dot active" aria-label="Ir a diapositiva 1"></button>
+                <button class="dot" aria-label="Ir a diapositiva 2"></button>
+                <button class="dot" aria-label="Ir a diapositiva 3"></button>
+            </div>
+
 
     </section>
+
+    <!-- SECCIÓN DE SERVICIOS -->
+        <section id="servicios" class="servicios-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>NUESTROS SERVICIOS</h2>
+                    <h3>Comercializacion Internacinal</h3>
+                </div>
+
+                <div class="cards-grid">
+                    <div class="card">
+                        <div class="card-icon yellow"><i class="fa-solid fa-couch"></i></div>
+                        <h4>Asesoria por profesionales</h4>
+                        <p>Asesoramiento profesional actaliado con las leyes del 2026.</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon red"><i class="fa-solid fa-volume-high"></i></div>
+                        <h4>Importacion y exportacion</h4>
+                        <p>Importacion y exportacion de todo tipo de material segun las noms.</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon yellow"><i class="fa-solid fa-microchip"></i></div>
+                        <h4>Apoyo en proyectos</h4>
+                        <p>Asesoramiento y acompañaminento por profesionales a lo largo de sus proyectos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN NOSOTROS -->
+        <section id="nosotros" class="nosotros-section">
+            <div class="container nosotros-inner">
+                <div class="nosotros-img">
+                    <img src="img/hero2.jpg" alt="sobre nosotros">
+                </div>
+                <div class="nosotros-info">
+                    <h2>SOBRE NOSOTROS</h2>
+                    <h3>Apasionados por el comercio internacional.</h3>
+                    <p>En <strong>ADUANPRO</strong>, bajo la dirección de Jean Manuel Robles Garcia, Licenciado en comercia y negocios internacionales.</p>
+                    <p>Brindamos consultoría y soluciones para tus proyectos.</p>
+                    <div class="stats">
+                        <div class="stat-box">
+                            <span class="stat-num yellow">+150</span>
+                            <span class="stat-lbl">Proyectos</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-num red">100%</span>
+                            <span class="stat-lbl">Satisfacción</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
 <body>
 
 
-<p>This is a paragraph.</p>
+
 
 </main>
 
